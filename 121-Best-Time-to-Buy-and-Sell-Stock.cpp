@@ -5,14 +5,12 @@ public:
         int r = 0;
         int maxP = 0;
 
-        while (r<prices.size())
+        while(r<prices.size())
         {
-            if(prices[r]>prices[l])
+            maxP = max(prices[r]-prices[l],maxP);
+            if(prices[r]<prices[l])
             {
-                maxP = max(maxP,prices[r]-prices[l]);
-            }
-            else{
-                l = r;
+                l=r;
             }
             r++;
         }
