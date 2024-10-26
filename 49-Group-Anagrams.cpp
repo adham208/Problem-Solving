@@ -9,17 +9,19 @@ public:
         }
 
         vector<vector<string>> result;
-        for(auto it= map.begin();it!=map.end();it++){
+        for(auto it = map.begin();it!=map.end();it++)
+        {
             result.push_back(it->second);
         }
         return result;
     }
 
+
 private:
     string getKey(string str){
         vector<int> count(26);
 
-        for(int i = 0;i<str.size();i++)
+        for(int i = 0 ;i<str.size();i++)
         {
             count[str[i]-'a']++;
         }
