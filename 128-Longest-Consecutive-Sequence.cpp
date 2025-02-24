@@ -5,10 +5,10 @@ public:
         int res = 0;
         for(int i : set)
         {
-            while(set.find(i-1)==set.end())
+            if(set.find(i-1)==set.end())
             {
                 int longest = 1;
-                if(set.find(i+longest)!=set.end())
+                while(set.find(i+longest)!=set.end())
                 {
                     longest++;
                 }
